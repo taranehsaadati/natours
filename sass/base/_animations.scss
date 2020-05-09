@@ -1,0 +1,40 @@
+
+@keyframes leftmoveright {
+    0% {
+      opacity: 0;
+      transform: translatex(-10rem);
+    }
+    30% {
+      transform: rotatex(180deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+  
+  @keyframes rightmoveleft {
+    0% {
+      opacity: 0;
+      transform: translate(10rem);
+    }
+    50% {
+      transform: rotatex(180deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes movebottom {
+    0% {
+      opacity: 0;
+      transform: translatey(3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
