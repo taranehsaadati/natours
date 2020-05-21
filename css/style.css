@@ -135,10 +135,10 @@ body {
     background-color: #fff; }
 
 .btn--green {
-  background-color: #55c57a;
+  background-color: #28b485;
   color: #fff; }
   .btn--green::after {
-    background-color: #55c57a; }
+    background-color: #28b485; }
 
 .btn::after {
   content: "";
@@ -158,15 +158,15 @@ body {
 
 .btn-text:visited, .btn-text:link {
   font-size: 1.6rem;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #28b485;
   text-decoration: none;
-  color: #55c57a;
-  padding: 3px;
+  color: #28b485;
+  padding: 10px;
   display: inline-block;
   transition: all 0.2s; }
 
 .btn-text:hover {
-  background-color: #55c57a;
+  background-color: #28b485;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
@@ -295,6 +295,71 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.story {
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  font-size: 1.6rem;
+  padding: 6rem;
+  padding-left: 10rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    height: 15rem;
+    width: 15rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    float: left;
+    transform: translateX(-4rem) skewX(12deg);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-6rem);
+    overflow: hidden;
+    transform: scale(1.3);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    background-size: cover; }
+  .story:hover .story__img {
+    transform: scale(1.2);
+    backface-visibility: hidden;
+    filter: blur(3px) brightness(70%); }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    font-size: 1.7rem;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+
+.bg-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .15;
+  z-index: -1;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .header {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   height: 95vh;
@@ -385,6 +450,10 @@ body {
   background-color: #f7f7f7;
   margin-top: -10rem;
   padding: 25rem 0 15rem 0; }
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative; }
 
 .section-futures-box {
   background-color: rgba(255, 255, 255, 0.8);
