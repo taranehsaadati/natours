@@ -1,6 +1,6 @@
 .section-futures-box{
     background-color:rgba($color-white,0.8);
-    border-radius:3px;
+    border-radius:$border-radius;
     padding:1rem;
     box-shadow:0.5rem 1rem 2rem rgba($color-black ,.2);
     transition:transform .2s;

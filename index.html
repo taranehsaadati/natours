@@ -12,6 +12,25 @@
 </head>
 
 <body>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__input" name="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">menu</label>
+        <div class="navigation__background">&nbsp;</div>
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>1</span>
+                        live</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>2</span>life</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>3</span>family</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>4</span>dad</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"><span>5</span>mom</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
     <header class="header">
         <div class="header__logo-box">
             <img src="./advanced-css-course-master/advanced-css-course-master/Natours/after-S05/img/logo-white.png"
@@ -244,10 +263,12 @@
         <section class="section-stories">
 
             <div class="bg-video">
-                <video  class="bg-video__content" autoplay muted loop>
+                <video class="bg-video__content" autoplay muted loop>
+                    <source src="../img/video.mp4" type="video/mp4">
                     <source src="../natours/img/video.mp4" type="video/mp4">
-                        <source src="../natours/img/video.webm" type="video/webm">
-                            your browser is not supported!
+                    <source src="../img/video.webm" type="video/webm">
+                    <source src="../natours/img/video.webm" type="video/webm">
+                    your browser is not supported!
                 </video>
             </div>
 
@@ -297,14 +318,112 @@
             <div class="u-center-text u-margin-top-huge">
                 <a href="#" class="btn-text">cover tours</a>
             </div>
-
-
         </section>
 
 
 
 
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form">
+                            <div class=" u-margin-bottom-small">
+                                <h2 class="heading-secondary">
+                                    live healt
+                                </h2>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="full name" required id="name">
+                                <label for="name" class="form__label">full name</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="email address" required id="email">
+                                <label for="email" class="form__label"> email address</label>
+                            </div>
+
+                            <div class="form__group">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+
+                                    <label for="small" class="form__radio-label">
+                                        <sapn class="form__radio-button"></sapn>
+                                        small tours
+                                    </label>
+                                </div>
+
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <sapn class="form__radio-button"></sapn>
+                                        large tours
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form__group">
+                                <button class="btn btn--green u-margin-top-medium">
+                                    free live
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="./img/logo-green-2x.png" alt="" class="footer__logo">
+        </div>
+        <!-- <div class="row">
+            <div class="col-1-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__link">company</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">contact</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">carrers</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">privacy</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">company</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-1-2">
+                <p class="footer__copyright">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus atque commodi quae deserunt laboriosam voluptatum, accusantium, sit enim quod consequuntur<a href="#" class="footer__link"> at saepe.</a>   Deserunt, aliquid?
+                </p>
+
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-1-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="" class="footer__link">company</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">contact</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">carrers</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">privacy</a></li>
+                        <li class="footer__item"><a href="" class="footer__link">company</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <p class="footer__copyright">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus
+                    atque commodi quae deserunt laboriosam voluptatum, accusantium, sit enim quod consequuntur<a
+                        href="#" class="footer__link"> at saepe.</a> Deserunt, aliquid?
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <!-- <section class="grid-test">
 

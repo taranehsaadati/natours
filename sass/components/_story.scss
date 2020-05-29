@@ -2,7 +2,7 @@
     background-color: $color-white;
     width: 75%;
     margin: 0 auto;
-    border-radius: 3px;
+    border-radius: $border-radius;
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     font-size: $defult-font-size;
     padding: 6rem;
