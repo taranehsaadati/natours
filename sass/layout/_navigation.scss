@@ -7,11 +7,13 @@
         top: 6.5rem;
         right: 6.5rem;
         border-radius: 50%;
-        height: 6.5rem;
-        width: 6.5rem;
+        height: 6rem;
+        width:6rem;
         z-index: 1000;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
-        transform: scale(50);
+        transition:transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+
+        
     }
     &__button {
         border-radius: 50%;
@@ -21,19 +23,25 @@
         height: 7rem;
         width: 7rem;
         background-color: $color-white;
+        box-shadow:0 1rem 3rem rgba($color-black,.1);
+        text-align:center;
         z-index: 2000;
+        cursor:pointer;
     }
     &__nav {
         height: 100vh;
-        width: 100%;
+        width: 0;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1500;
+        opacity:0;
+        transition:all.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     &__link {
         &:link,
         &:visited {
+            padding:0 2rem;
             text-decoration:none;
             color:$color-white;
             font-size:3rem;
@@ -70,4 +78,63 @@
         
     
     }
+    &__input:checked ~ &__background{
+        transform: scale(50);
+    }
+    &__input:checked ~ &__nav{
+        width:100%;
+        opacity:1;
+    }
+    &__icon{
+        position:relative;
+        margin-top:3.5rem;
+        
+        
+
+        
+        &,
+        &::after,
+        &::before{
+          
+            height:2px;
+            width:3rem;
+            display:inline-block;
+            background-color:$color-gray-darken;
+           
+
+        }
+        &::after,
+        &::before{
+         
+            transition:all .2s;
+            position: absolute;
+            content:"";
+            left:0;
+        }
+        &::after{
+            top:.73rem;
+        }
+        &::before{
+            top:-.70rem;
+        }
+    }
+    &__button:hover &__icon::after{
+        top:1rem;
+    }
+    &__button:hover &__icon::before{
+        top:-1rem;
+    }
+    &__input:checked + &__button &__icon{
+        background-color:transparent;
+    }
+    &__input:checked + &__button &__icon::after{
+        top:0;
+        transform:rotate(-135deg);
+    }
+    &__input:checked + &__button &__icon::before{
+        transform:rotate(135deg);
+        top:0;
+    }
+
+
 }
