@@ -6,12 +6,21 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     font-size: $defult-font-size;
     padding: 6rem;
-    padding-left: 10rem;
+    padding-left: 9rem;
     transform: skewX(-12deg);
+    @include respond(tabl-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         height: 15rem;
         width: 15rem;
-        background-color:rgba($color-black, 0.1);
+        background-color: rgba($color-black, 0.1);
         overflow: hidden;
         float: left;
         transform: translateX(-4rem) skewX(12deg);
@@ -20,24 +29,29 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         position: relative;
+        @include respond(phone) {
+            transform: translateX(-4rem) skewX(0);
+        }
     }
     &__img {
         height: 100%;
         transform: translateX(-6rem);
         overflow: hidden;
-        transform:scale(1.3);
+        transform: scale(1.3);
         backface-visibility: hidden;
-        transition:all 0.5s;
-        background-size:cover;
-        
+        transition: all 0.5s;
+        background-size: cover;
     }
-    &:hover &__img{
-        transform:scale(1.2);
+    &:hover &__img {
+        transform: scale(1.2);
         backface-visibility: hidden;
-        filter:blur(3px) brightness(70%);
+        filter: blur(3px) brightness(70%);
     }
     &__text {
         transform: skewX(12deg);
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
     &__caption {
         color: $color-white;
@@ -48,11 +62,11 @@
         transform: translate(-50%, 0);
         opacity: 0;
         font-size: 1.7rem;
-        transition:all 0.5s;
+        transition: all 0.5s;
         backface-visibility: hidden;
     }
-    &:hover &__caption{
-        opacity:1;
-        transform:translate(-50%,-50%);
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
     }
 }
