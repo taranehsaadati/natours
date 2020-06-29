@@ -8,44 +8,36 @@
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   box-sizing: border-box;
   position: relative;
+
+ 
+ @include respond(tabl-land){
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+
+ }
+ @include respond(tabl-port){
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+ }
+ @include respond(phone){
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 83vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 83vh, 0 100%);
+
+ }
   &__logo-box {
     position: absolute;
-    width: 5rem;
-    top: 2rem;
-    left: 2rem;
+    width: 7rem;
+    top: 5rem;
+    left: 5rem;
+    @include respond(tabl-port){
+      top: 4rem;
+      left: 4rem;
+    }
   }
 
   &__box-text {
     text-align: center;
     @include Inthemiddleofthings;
-  }
-}
-
-.heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 3rem;
-  &--main {
-    display: block;
-    font-size: 3.5rem;
-    letter-spacing: 0.7rem;
-    font-weight: 500;
-    text-align: center;
-    line-height: 4rem;
-    animation-name: leftmoveright;
-    animation-duration: 3s;
-    margin-bottom: 3rem;
-  }
-
-  &--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 2.7rem;
-    text-align: center;
-    letter-spacing: 0.7rem;
-    animation-name: rightmoveleft;
-    animation-duration: 3s;
   }
 }

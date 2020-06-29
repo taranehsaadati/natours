@@ -4,13 +4,35 @@
     @include clearfix;
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        @include respond(tabl-port){
+            margin-bottom: $gutter-vertical-small;
+
+        }
+    }
+    @include respond(tabl-port) {
+        max-width:50rem;
+        padding:0 3rem;
     }
     [class^="col-"] {
+        float: left;
+        @include respond(tabl-land) {
+            padding:0 .5rem;
+        }
+        
+     
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            @include respond(tabl-port) {
+                margin-right:0;
+                margin-bottom: $gutter-vertical-small;
         }
-        // background-color: blue;
-        float: left;
+    }
+        @include respond(tabl-port) {
+            width:100% !important;
+            float:none;
+        }
+
+     
     }
     .col-1-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);

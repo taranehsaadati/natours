@@ -12,6 +12,18 @@
         z-index: 1000;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         transition:transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+      
+        //   @include respond(tabl-land){
+        //     height:5rem;
+        //     width:5rem;
+         
+        //   }
+          @include respond(tabl-port){
+            height:4rem;
+            width:4rem;
+         
+          }
+        
 
         
     }
@@ -27,6 +39,13 @@
         text-align:center;
         z-index: 2000;
         cursor:pointer;
+        @include respond(tabl-port){
+            top:4rem;
+            right:4rem;
+         
+          }
+    
+        
     }
     &__nav {
         height: 100vh;
@@ -80,6 +99,11 @@
     }
     &__input:checked ~ &__background{
         transform: scale(50);
+        @include respond(tabl-land){
+        transform: scale(70);
+            
+         
+          }
     }
     &__input:checked ~ &__nav{
         width:100%;

@@ -8,9 +8,23 @@
 html {
   // This defines what 1rem is
   font-size: 62.5%;
+
+  @include respond(tabl-land) {
+    font-size: 56.25%; //1rem=9px  9px/16=.5625
+  }
+  @include respond(tabl-port) {
+    font-size: 50%; //1rem=8px  8px/16=0.5
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem=12px  12px/16=.75
+  }
 }
 
 body {
-  padding:2rem;
+  padding: 2rem;
   box-sizing: border-box;
+  @include respond(tabl-port) {
+    padding: 0;
+  }
 }
