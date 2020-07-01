@@ -56,11 +56,26 @@
 .book{
     border-radius:$border-radius;
     box-shadow:0 1.5rem 4rem rgbe($color-black,.2);
-    background-image:linear-gradient(105deg,rgba($color-white,.9)50%, transparent 0%),url(../img/nat-10.jpg);
-    background-size:cover;
-    height:50rem;
+    background-image:linear-gradient(105deg,rgba($color-white,.9)0%,rgba($color-white,.9)50%, transparent 50%),url(../img/nat-10.jpg);
+    background-size:100%;
+    
+    @include respond(tabl-land){
+        margin:0 3rem;
+        background-image:linear-gradient(105deg,rgba($color-white,.9)0%,rgba($color-white,.9)65%, transparent 65%),url(../img/nat-10.jpg);
+        background-size:cover;
+    }
+    @include respond(tabl-port){
+        background-image:linear-gradient(105deg,rgba($color-white,.9)0%,rgba($color-white,.9)100%),url(../img/nat-10.jpg);
+    }
     &__form{
         width:50%;
         padding:6rem;
+        @include respond(tabl-land){
+            width:65%;
+        }
+        @include respond(tabl-port){
+            width:100%;
+        }
+
     }
 }

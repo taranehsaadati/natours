@@ -58,6 +58,10 @@
         transition:all.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     &__link {
+        @include respond(phone){
+         font-size:2rem !important;
+       
+          }
         &:link,
         &:visited {
             padding:0 2rem;
@@ -70,12 +74,15 @@
             background-size:300%;
             transition:all .4s;
             text-transform:uppercase
-
+        
 
         }
         span{
         display:inline-block;
         margin-right:2rem;
+        @include respond(phone){
+            margin-right:.5rem;
+             }
         }
         &:hover,
         &:active{
