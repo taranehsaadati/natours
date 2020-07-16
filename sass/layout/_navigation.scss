@@ -58,10 +58,19 @@
         transition:all.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     &__link {
+        @include respond(big-desktop){
+            font-size:5rem !important;
+          
+             }
+             @include respond(normal){
+                font-size:4rem !important;
+              
+                 }
         @include respond(phone){
-         font-size:2rem !important;
+         font-size:3rem !important;
        
           }
+         
         &:link,
         &:visited {
             padding:0 2rem;
@@ -105,12 +114,10 @@
     
     }
     &__input:checked ~ &__background{
-        transform: scale(50);
-        @include respond(tabl-land){
-        transform: scale(70);
-            
-         
-          }
+        transform: scale(100);
+
+    
+
     }
     &__input:checked ~ &__nav{
         width:100%;
