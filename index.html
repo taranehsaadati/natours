@@ -26,7 +26,7 @@
                 <li class="navigation__item"><a href="#" class="navigation__link"><span>4</span>dad</a></li>
                 <li class="navigation__item"><a href="#" class="navigation__link"><span>5</span>mom</a></li>
             </ul>
-          
+
         </div>
     </div>
 
@@ -83,12 +83,21 @@
                 </div>
                 <div class="col-1-2">
                     <div class="composition">
-                        <img src="./img/nat-1-large.jpg" alt="photo 1"
+                        <img srcset="./img/nat-1.jpg 300w , ./img/nat-1-large.jpg 1000w" alt="" sizes="(max-width:56.25em)20vw,(max-width:37.5em)30vw,300px"
+                        alt="photo 1" class="composition__photo composition__photo--p1">
+                        
+                        <img srcset="./img/nat-2.jpg 300w , ./img/nat-2-large.jpg 1000w" alt="" sizes="(max-width:56.25em)20vw,(max-width:37.5em)30vw,300px"
+                        alt="photo 2" class="composition__photo composition__photo--p2">
+
+                        <img srcset="./img/nat-3.jpg 300w , ./img/nat-3-large.jpg 1000w" alt="" sizes="(max-width:56.25em)20vw,(max-width:37.5em)30vw,300px"
+                        alt="photo 3" class="composition__photo composition__photo--p3">
+
+                        <!-- <img src="./img/nat-1-large.jpg" alt="photo 1"
                             class="composition__photo composition__photo--p1">
                         <img src="./img/nat-2-large.jpg" alt="photo 2"
                             class="composition__photo composition__photo--p2">
                         <img src="./img/nat-3-large.jpg" alt="photo 3"
-                            class="composition__photo composition__photo--p3">
+                            class="composition__photo composition__photo--p3"> -->
                     </div>
                 </div>
             </div>
@@ -382,7 +391,12 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="./img/logo-green-2x.png" alt="" class="footer__logo">
+
+            <picture class="footer__logo">
+                <source srcset="./img/logo-green-small-1x.png  1x,./img/logo-green-small-2x.png  2x" media="(max-width:37.5em)">
+                <img srcset="./img/logo-green-1x.png 1x,./img/logo-green-2x.png 2x" alt="full-logo">
+            </picture>
+
         </div>
 
         <div class="row">
@@ -406,7 +420,7 @@
         </div>
     </footer>
 
-    <div class="popup"id="popup" >
+    <div class="popup" id="popup">
         <div class="popup__content">
             <div class="popup__left">
                 <img src="../natours/img/nat-5.jpg" alt="" class="popup__img  popup__img--1">

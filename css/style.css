@@ -693,7 +693,7 @@ body {
     visibility: visible; }
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   height: 95vh;
   background-size: cover;
   background-position: top;
@@ -701,6 +701,9 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   box-sizing: border-box;
   position: relative; }
+  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media (max-width: 75em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
@@ -864,9 +867,17 @@ body {
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
+@media (min-width: 112.5em) {
+  .navigation__link {
+    font-size: 5rem !important; } }
+
+@media (max-width: 112.5em) {
+  .navigation__link {
+    font-size: 4rem !important; } }
+
 @media (max-width: 37.5em) {
   .navigation__link {
-    font-size: 2rem !important; } }
+    font-size: 3rem !important; } }
 
 .navigation__link:link, .navigation__link:visited {
   padding: 0 2rem;
@@ -903,10 +914,7 @@ body {
   margin: 1.5rem; }
 
 .navigation__input:checked ~ .navigation__background {
-  transform: scale(50); }
-  @media (max-width: 75em) {
-    .navigation__input:checked ~ .navigation__background {
-      transform: scale(70); } }
+  transform: scale(100); }
 
 .navigation__input:checked ~ .navigation__nav {
   width: 100%;
@@ -953,7 +961,8 @@ body {
   padding: 25rem 0; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 20rem 0; } }
+      padding: 20rem 0;
+      padding-top: 30rem; } }
 
 .section-futures {
   text-align: center;
