@@ -24,14 +24,20 @@
         overflow: hidden;
         float: left;
         transform: translateX(-4rem) skewX(12deg);
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         position: relative;
+        
+        border-radius:50%;
         @include respond(phone) {
             transform: translateX(-4rem) skewX(0);
         }
+        @supports (-webkit-clip-path: circle(0 0)) or (clip-path:circle(0 0)){
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            border-radius:none;
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+        }
+
     }
     &__img {
         height: 100%;
